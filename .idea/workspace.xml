@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Partition Page 탐색 알고리즘 구현 중">
-      <change afterPath="$PROJECT_DIR$/wordCounter.py" afterDir="false" />
+    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Scraping 기능 구현&#10;- 기간별 Scraping">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scraping_Chungnam.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraping_Chungnam.py" afterDir="false" />
     </list>
@@ -130,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616378442342</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Scraping 기능 구현&#10;- 기간별 Scraping">
+      <created>1616514850580</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616514850580</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +156,7 @@
     <MESSAGE value="기본적인 find_element 함수 사용&#10;- 특정페이지의 제목, 날짜, 부서 등의 정보 스크랩&#10;- selenium click()함수를 사용하여 이전 페이지로 이동가능&#10;&#10;※ 한글뷰어의 내용(content)을 가져오는 방법 구현 중" />
     <MESSAGE value="크롤링 사이트 대상 변경&#10;- 문체부 -&gt; 충남도청&#10;&#10;※ partitionPage 탐색 요령 필요" />
     <MESSAGE value="Partition Page 탐색 알고리즘 구현 중" />
-    <option name="LAST_COMMIT_MESSAGE" value="Partition Page 탐색 알고리즘 구현 중" />
+    <MESSAGE value="Scraping 기능 구현&#10;- 기간별 Scraping" />
+    <option name="LAST_COMMIT_MESSAGE" value="Scraping 기능 구현&#10;- 기간별 Scraping" />
   </component>
 </project>
