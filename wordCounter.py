@@ -4,8 +4,10 @@ from pandas import DataFrame
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 import matplotlib.font_manager as fm
+import time
 
 def main():
+    wordPath = "data_file/SearchWords.xlsx"
     name = ['date', 'department', 'title', 'content'] # 칼럼 이름
     contents = pd.read_csv('ScrapData/post.csv', header=0, parse_dates=['department'], names=name)
 
@@ -15,6 +17,37 @@ def main():
     contents_Departments(len(contents), allDepartments, departments_unique)
 
 
+    # 여기부터
+    searchWord = load_searchWord(wordPath)
+
+    # num_department = dict.fromkeys(departments_unique, dict()) # dic 리스트
+    num_department = dict((key, dict()) for key in departments_unique)
+
+    for i in contents.index:
+        print(i)
+        department = contents._get_value(i, 'department')
+        content = contents._get_value(i, 'content')
+        for word in searchWord:
+            cntNum = content.count(word)
+            if cntNum > 0:
+                print(department, " : ", word, " : ", str(cntNum))
+                if num_department[department].get(word):
+                    num_department[department][word] += 1
+                    print(" + 1")
+                else:
+                    num_department[department][word] = cntNum
+                    print(" 새로 만듬 ")
+    for i in list(departments_unique):
+        print(i, " : ", num_department[i])
+
+
+
+
+def load_searchWord(file_path):
+    df = pd.read_excel(file_path, sheet_name=0)  # can also name of sheet
+    my_list = df['단어/용어'].tolist()
+
+    return my_list
 
 
 def contents_Departments(contents_length, allDepartments, departments_unique):

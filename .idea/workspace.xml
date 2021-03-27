@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Test Scraping review&#10;- 2241개 데이터 수집&#10;- 비어있는 데이터 확인(26/2241)&#10;※ 비어있는 데이터 확인하기">
+    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="부서별 자료 수 분석 및 시각화 구현&#10;- wordCounter에 필요하여 사전에 구현">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wordCounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter.py" afterDir="false" />
     </list>
@@ -165,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616521328761</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="부서별 자료 수 분석 및 시각화 구현&#10;- wordCounter에 필요하여 사전에 구현">
+      <created>1616856006241</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616856006241</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +194,7 @@
     <MESSAGE value="Partition Page 탐색 알고리즘 구현 중" />
     <MESSAGE value="Scraping 기능 구현&#10;- 기간별 Scraping" />
     <MESSAGE value="Test Scraping review&#10;- 2241개 데이터 수집&#10;- 비어있는 데이터 확인(26/2241)&#10;※ 비어있는 데이터 확인하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Scraping review&#10;- 2241개 데이터 수집&#10;- 비어있는 데이터 확인(26/2241)&#10;※ 비어있는 데이터 확인하기" />
+    <MESSAGE value="부서별 자료 수 분석 및 시각화 구현&#10;- wordCounter에 필요하여 사전에 구현" />
+    <option name="LAST_COMMIT_MESSAGE" value="부서별 자료 수 분석 및 시각화 구현&#10;- wordCounter에 필요하여 사전에 구현" />
   </component>
 </project>
