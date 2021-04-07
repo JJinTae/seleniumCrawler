@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+import re
 import pandas as pd
 import numpy as np
 from pandas import DataFrame
@@ -7,13 +10,15 @@ import matplotlib.font_manager as fm
 import time
 
 from konlpy.tag import Okt
+from konlpy.tag import Komoran
+
 from collections import Counter
 
 
 def main():
     wordPath = "data_file/SearchWords.xlsx"
     name = ['date', 'department', 'title', 'content'] # 칼럼 이름
-    contents = pd.read_csv('ScrapData/post.csv', header=0, parse_dates=['department'], names=name)
+    contents = pd.read_csv('ScrapData/post.csv', encoding='utf-8', header=0, parse_dates=['department'], names=name)
 
     data_info(contents) # 불러온 csv파일의 정보 확인
     allDepartments = get_allDepartments(contents) # 데이터의 모든 부서 조회(중복O)
@@ -31,7 +36,29 @@ def main():
         print(i)
         department = contents._get_value(i, 'department')
         content = contents._get_value(i, 'content')
+        nlpy = Komoran()
+        try:
+            nouns = nlpy.nouns(content)
+        except:
+            print("decode error in : ", i, " content")
+            content = re.sub('[󰡒]', '', content)
+            nouns = nlpy.nouns(content)
 
+        count = Counter(nouns)
+
+        for word in searchWord:
+            if count.get(word):
+                print(count)
+                print("Find in nouns : ", word, " : ", count[word])
+
+                if num_department[department].get(word):
+                    num_department[department][word] += count[word]
+                    print(" Add countNum :", word, " : ", count[word])
+                else:
+                    num_department[department][word] = count[word]
+                    print(" New word in department : ", word, " : ", count[word])
+
+        """
         for word in searchWord:
             cntNum = content.count(word)
             if cntNum > 0:
@@ -42,7 +69,7 @@ def main():
                 else:
                     num_department[department][word] = cntNum
                     print(" New word in department ")
-
+        """
     for i in list(departments_unique):
         # print(i, " : ", num_department[i])
         res = sorted(num_department[i].items(), key=(lambda x:x[1]), reverse=True)
