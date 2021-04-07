@@ -6,6 +6,10 @@ import matplotlib as mpl
 import matplotlib.font_manager as fm
 import time
 
+from konlpy.tag import Okt
+from collections import Counter
+
+
 def main():
     wordPath = "data_file/SearchWords.xlsx"
     name = ['date', 'department', 'title', 'content'] # 칼럼 이름
@@ -27,18 +31,23 @@ def main():
         print(i)
         department = contents._get_value(i, 'department')
         content = contents._get_value(i, 'content')
+
         for word in searchWord:
             cntNum = content.count(word)
             if cntNum > 0:
                 print(department, " : ", word, " : ", str(cntNum))
                 if num_department[department].get(word):
-                    num_department[department][word] += 1
-                    print(" + 1")
+                    num_department[department][word] += cntNum
+                    print(" Add countNum :", word)
                 else:
                     num_department[department][word] = cntNum
-                    print(" 새로 만듬 ")
+                    print(" New word in department ")
+
     for i in list(departments_unique):
-        print(i, " : ", num_department[i])
+        # print(i, " : ", num_department[i])
+        res = sorted(num_department[i].items(), key=(lambda x:x[1]), reverse=True)
+        print(i, " : ", res)
+
 
 
 
@@ -66,7 +75,7 @@ def contents_Departments(contents_length, allDepartments, departments_unique):
 
     departments_counter = TDM.sum(axis=1)
     print("departments_counter")
-    print(departments_counter)
+    print(departments_counter.sort_values(ascending=False))
 
     plt.rcParams['axes.unicode_minus'] = False
     plt.rc('font', family='New Gulim', size=5)
