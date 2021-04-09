@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="wordCounter CountNum 추가 오류 수정&#10;- wordCouter.py의 검색된 단어 빈도수 추가에서 1이 아닌 cntNum을 더해줘야 함으로 수정">
+    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="wordCounter 분석방법 변경&#10;- nlpy의 자연어 처리를 통해 명사를 따로 추출하여 빈도수 검사&#10;- konlpy.tag의 Komoran, Okt 등 간편하게 변경 가능&#10;※ 스마트팜 등 합성어가 누락되는 경우가 발생">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wordCounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter.py" afterDir="false" />
     </list>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617765809876</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="wordCounter 분석방법 변경&#10;- nlpy의 자연어 처리를 통해 명사를 따로 추출하여 빈도수 검사&#10;- konlpy.tag의 Komoran, Okt 등 간편하게 변경 가능&#10;※ 스마트팜 등 합성어가 누락되는 경우가 발생">
+      <created>1617783535213</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617783535213</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -211,6 +218,7 @@
     <MESSAGE value="부서별 자료 수 분석 및 시각화 구현&#10;- wordCounter에 필요하여 사전에 구현" />
     <MESSAGE value="부서별 WordCounter 기능 구현&#10;- count 함수로 단순히 빈도 수 확인&#10;※ count 함수를 사용하여 문제 발생&#10;ex) 감사드린다. = &gt; 사드 : 1" />
     <MESSAGE value="wordCounter CountNum 추가 오류 수정&#10;- wordCouter.py의 검색된 단어 빈도수 추가에서 1이 아닌 cntNum을 더해줘야 함으로 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="wordCounter CountNum 추가 오류 수정&#10;- wordCouter.py의 검색된 단어 빈도수 추가에서 1이 아닌 cntNum을 더해줘야 함으로 수정" />
+    <MESSAGE value="wordCounter 분석방법 변경&#10;- nlpy의 자연어 처리를 통해 명사를 따로 추출하여 빈도수 검사&#10;- konlpy.tag의 Komoran, Okt 등 간편하게 변경 가능&#10;※ 스마트팜 등 합성어가 누락되는 경우가 발생" />
+    <option name="LAST_COMMIT_MESSAGE" value="wordCounter 분석방법 변경&#10;- nlpy의 자연어 처리를 통해 명사를 따로 추출하여 빈도수 검사&#10;- konlpy.tag의 Komoran, Okt 등 간편하게 변경 가능&#10;※ 스마트팜 등 합성어가 누락되는 경우가 발생" />
   </component>
 </project>

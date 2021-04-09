@@ -16,6 +16,7 @@ from collections import Counter
 
 
 def main():
+    # xlrd 1.2.0 패키지 설치 필수
     wordPath = "data_file/SearchWords.xlsx"
     name = ['date', 'department', 'title', 'content'] # 칼럼 이름
     contents = pd.read_csv('ScrapData/post.csv', encoding='utf-8', header=0, parse_dates=['department'], names=name)
@@ -58,6 +59,7 @@ def main():
                     num_department[department][word] = count[word]
                     print(" New word in department : ", word, " : ", count[word])
 
+        # 한글의 형태소(명사 등)를 구분하지 않고 전체 검색 : 대조군으로 이용
         """
         for word in searchWord:
             cntNum = content.count(word)
@@ -76,6 +78,8 @@ def main():
         print(i, " : ", res)
 
 
+
+def load_contents():
 
 
 
@@ -140,31 +144,7 @@ def data_info(contents):
     print("전체 글 수 : ", len(contents))
 
 
-# COUNTER
-"""
 
-# xlrd 1.2.0 패키지 설치 필수
-def load_searchWord():
-
-    df = pd.read_excel("./data_file/SearchWords.xlsx", sheet_name=0)  # can also name of sheet
-    my_list = df['단어/용어'].tolist()
-
-    return my_list
-
-f = open("./data_file/testFile.txt", mode='r', encoding='UTF8')
-text = f.read()
-print(text)
-
-print(load_searchWord())
-
-
-
-for i in load_searchWord():
-    cntNum = text.count(i)
-    if cntNum > 0:
-        print(i + " : " + str(cntNum))
-        
-"""
 
 if __name__ == '__main__':
     main()
