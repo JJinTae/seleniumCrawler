@@ -79,8 +79,6 @@ def main():
 
 
 
-def load_contents():
-
 
 
 def load_searchWord(file_path):
