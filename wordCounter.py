@@ -72,9 +72,9 @@ def main():
                     num_department[department][word] = cntNum
                     print(" New word in department ")
         """
-    for i in list(departments_unique):
+    for listUnique in list(departments_unique):
         # print(i, " : ", num_department[i])
-        res = sorted(num_department[i].items(), key=(lambda x:x[1]), reverse=True)
+        res = sorted(num_department[listUnique].items(), key=(lambda x:x[1]), reverse=True)
         print(i, " : ", res)
 
 
