@@ -27,15 +27,19 @@ def main():
                 else:
                     list_file[file_path][word] = cntNum
                     print(" New word in department : ", word, " : ", cntNum)
-
+    print(list_file)
+    deduplicate_word(list_file)
+    print(list_file)
     for i in list(list_file):
         # print(i, " : ", num_department[i])
         res = sorted(list_file[i].items(), key=(lambda x: x[1]), reverse=True)
         print(i, " : ", res)
 
-    count_all(list_file)
 
-def count_all(dictList : dict):
+
+    count_total(list_file)
+
+def count_total(dictList : dict):
 
     totalCount = Counter()
 
@@ -43,6 +47,22 @@ def count_all(dictList : dict):
         totalCount = totalCount + Counter(listDict)
 
     print(totalCount)
+
+
+# str.count() 중복 제거
+def deduplicate_word(dictList : dict):
+    print("------------- deduplicate_word start --------------")
+
+    for file in dictList:
+        for i in dictList[file]:
+            for j in dictList[file]:
+                if i != j:
+                    if i in j:
+                        dictList[file][i] = dictList[file][i] - dictList[file][j]
+
+    print("----------- deduplicate_word start End ------------")
+
+
 
 
 def load_searchWord(file_path):

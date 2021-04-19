@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="충청남도 조례 데이터 수집을 위한 html parser&#10;- selenium의 iframe 접근 특성상 driver.switch_to.frame() 을 사용하여야 함&#10;- html만 수집한 상태&#10;- 추가적으로 해당 html에 Click()을 수행하여 데이터 수집 필요">
-      <change afterPath="$PROJECT_DIR$/worldCounter_Files.py" afterDir="false" />
+    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Add wordCounter_Files.py&#10;- 폴더 내 모든 .text파일을 읽어와 빈도수 측정&#10;- dict하위 클래스인 Counter를 사용하여 빈도수 총합 구하는 기능 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordCounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worldCounter_Files.py" beforeDir="false" afterPath="$PROJECT_DIR$/worldCounter_Files.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618256952103</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add wordCounter_Files.py&#10;- 폴더 내 모든 .text파일을 읽어와 빈도수 측정&#10;- dict하위 클래스인 Counter를 사용하여 빈도수 총합 구하는 기능 추가">
+      <created>1618782586142</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1618782586142</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -280,6 +286,7 @@
     <MESSAGE value="wordCounter 분석방법 변경&#10;- nlpy의 자연어 처리를 통해 명사를 따로 추출하여 빈도수 검사&#10;- konlpy.tag의 Komoran, Okt 등 간편하게 변경 가능&#10;※ 스마트팜 등 합성어가 누락되는 경우가 발생" />
     <MESSAGE value="wordCounter 주석" />
     <MESSAGE value="충청남도 조례 데이터 수집을 위한 html parser&#10;- selenium의 iframe 접근 특성상 driver.switch_to.frame() 을 사용하여야 함&#10;- html만 수집한 상태&#10;- 추가적으로 해당 html에 Click()을 수행하여 데이터 수집 필요" />
-    <option name="LAST_COMMIT_MESSAGE" value="충청남도 조례 데이터 수집을 위한 html parser&#10;- selenium의 iframe 접근 특성상 driver.switch_to.frame() 을 사용하여야 함&#10;- html만 수집한 상태&#10;- 추가적으로 해당 html에 Click()을 수행하여 데이터 수집 필요" />
+    <MESSAGE value="Add wordCounter_Files.py&#10;- 폴더 내 모든 .text파일을 읽어와 빈도수 측정&#10;- dict하위 클래스인 Counter를 사용하여 빈도수 총합 구하는 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add wordCounter_Files.py&#10;- 폴더 내 모든 .text파일을 읽어와 빈도수 측정&#10;- dict하위 클래스인 Counter를 사용하여 빈도수 총합 구하는 기능 추가" />
   </component>
 </project>
