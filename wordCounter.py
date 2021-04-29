@@ -82,6 +82,18 @@ def main():
     print(totalCount)
 
 
+    # Excel 저장 부분 임시 (수정 중 210430)
+    departmentData = pd.DataFrame.from_dict(num_department, orient="index")
+    print(departmentData)
+    departmentData = departmentData.T
+
+    totalData = pd.DataFrame(data=[totalCount], index=["빈도수"])
+    totalData = totalData.T
+
+    with pd.ExcelWriter('testDict.xlsx') as writer:
+        departmentData.to_excel(writer, sheet_name="부서별")
+        totalData.to_excel(writer, sheet_name="총 합")
+    # Excel 저장 부분
 
 
 def sort_length(dictList):
