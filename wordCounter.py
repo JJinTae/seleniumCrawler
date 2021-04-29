@@ -37,6 +37,9 @@ def main():
         print(i)
         department = contents._get_value(i, 'department')
         content = contents._get_value(i, 'content')
+
+        """
+        # 형태소 분석기 사용
         nlpy = Komoran()
         try:
             nouns = nlpy.nouns(content)
@@ -58,9 +61,9 @@ def main():
                 else:
                     num_department[department][word] = count[word]
                     print(" New word in department : ", word, " : ", count[word])
-
-        # 한글의 형태소(명사 등)를 구분하지 않고 전체 검색 : 대조군으로 이용
         """
+        # 한글의 형태소(명사 등)를 구분하지 않고 전체 검색 : 대조군으로 이용
+
         for word in searchWord:
             cntNum = content.count(word)
             if cntNum > 0:
@@ -71,19 +74,54 @@ def main():
                 else:
                     num_department[department][word] = cntNum
                     print(" New word in department ")
-        """
-    for listUnique in list(departments_unique):
+
+    sort_length(num_department)
+    deduplicate_word(num_department)
+    view_count_department(num_department) # 부서 별 내림차순 정렬
+    totalCount = count_total(num_department)
+    print(totalCount)
+
+
+
+
+def sort_length(dictList):
+    for i in list(dictList):
+        dictList[i] = dict(sorted(dictList[i].items(), key=lambda x: len(x[0]), reverse=True))
+
+
+def view_count_department(dictList):
+    for listUnique in list(dictList):
         # print(i, " : ", num_department[i])
-        res = sorted(num_department[listUnique].items(), key=(lambda x:x[1]), reverse=True)
-        print(i, " : ", res)
+        res = sorted(dictList[listUnique].items(), key=(lambda x:x[1]), reverse=True)
+        print(listUnique, " : ", res)
 
 
+def count_total(dictList : dict):
+    totalCount = Counter()
+
+    for listDict in dictList.values():
+        totalCount = totalCount + Counter(listDict)
+
+    return totalCount
+
+
+
+# str.count() 중복 제거
+def deduplicate_word(dictList : dict):
+
+    for file in dictList:
+        for i in dictList[file]:
+            for j in dictList[file]:
+                if i != j:
+                    if i in j:
+                        dictList[file][i] = dictList[file][i] - dictList[file][j]
 
 
 
 def load_searchWord(file_path):
     df = pd.read_excel(file_path, sheet_name=0)  # can also name of sheet
     my_list = df['단어/용어'].tolist()
+    my_list.sort(key=lambda x: len(x), reverse=True)
 
     return my_list
 

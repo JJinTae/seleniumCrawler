@@ -27,31 +27,40 @@ def main():
                 else:
                     list_file[file_path][word] = cntNum
                     print(" New word in department : ", word, " : ", cntNum)
+
     print(list_file)
+    sort_length(list_file)
     deduplicate_word(list_file)
-    print(list_file)
-    for i in list(list_file):
+    view_count_department(list_file)
+    totalCount = count_total(list_file)
+    print(totalCount)
+
+
+
+
+def sort_length(dictList):
+    for i in list(dictList):
+        dictList[i] = dict(sorted(dictList[i].items(), key=lambda x: len(x[0]), reverse=True))
+
+
+def view_count_department(dictList):
+    for listUnique in list(dictList):
         # print(i, " : ", num_department[i])
-        res = sorted(list_file[i].items(), key=(lambda x: x[1]), reverse=True)
-        print(i, " : ", res)
+        res = sorted(dictList[listUnique].items(), key=(lambda x:x[1]), reverse=True)
+        print(listUnique, " : ", res)
 
-
-
-    count_total(list_file)
 
 def count_total(dictList : dict):
-
     totalCount = Counter()
 
     for listDict in dictList.values():
         totalCount = totalCount + Counter(listDict)
 
-    print(totalCount)
+    return totalCount
 
 
 # str.count() 중복 제거
 def deduplicate_word(dictList : dict):
-    print("------------- deduplicate_word start --------------")
 
     for file in dictList:
         for i in dictList[file]:
@@ -59,8 +68,6 @@ def deduplicate_word(dictList : dict):
                 if i != j:
                     if i in j:
                         dictList[file][i] = dictList[file][i] - dictList[file][j]
-
-    print("----------- deduplicate_word start End ------------")
 
 
 

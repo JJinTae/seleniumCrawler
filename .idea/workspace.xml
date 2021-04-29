@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Add wordCounter_Files.py&#10;- 폴더 내 모든 .text파일을 읽어와 빈도수 측정&#10;- dict하위 클래스인 Counter를 사용하여 빈도수 총합 구하는 기능 추가">
+    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Add def deduplicate_word() to wordCounter_Files.py &#10;- count() 함수의 중복 제거&#10;※ n^3 복잡도 알고리즘 업데이트 필요">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordCounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/worldCounter_Files.py" beforeDir="false" afterPath="$PROJECT_DIR$/worldCounter_Files.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,8 +153,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.worldCounter_Files" />
-        <item itemvalue="Python.scraping_Locallaws" />
         <item itemvalue="Python.wordCounter" />
+        <item itemvalue="Python.scraping_Locallaws" />
         <item itemvalue="Python.scraping_Chungnam" />
       </list>
     </recent_temporary>
@@ -258,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618782586142</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add def deduplicate_word() to wordCounter_Files.py &#10;- count() 함수의 중복 제거&#10;※ n^3 복잡도 알고리즘 업데이트 필요">
+      <created>1618862505645</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1618862505645</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,6 +295,7 @@
     <MESSAGE value="wordCounter 주석" />
     <MESSAGE value="충청남도 조례 데이터 수집을 위한 html parser&#10;- selenium의 iframe 접근 특성상 driver.switch_to.frame() 을 사용하여야 함&#10;- html만 수집한 상태&#10;- 추가적으로 해당 html에 Click()을 수행하여 데이터 수집 필요" />
     <MESSAGE value="Add wordCounter_Files.py&#10;- 폴더 내 모든 .text파일을 읽어와 빈도수 측정&#10;- dict하위 클래스인 Counter를 사용하여 빈도수 총합 구하는 기능 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add wordCounter_Files.py&#10;- 폴더 내 모든 .text파일을 읽어와 빈도수 측정&#10;- dict하위 클래스인 Counter를 사용하여 빈도수 총합 구하는 기능 추가" />
+    <MESSAGE value="Add def deduplicate_word() to wordCounter_Files.py &#10;- count() 함수의 중복 제거&#10;※ n^3 복잡도 알고리즘 업데이트 필요" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add def deduplicate_word() to wordCounter_Files.py &#10;- count() 함수의 중복 제거&#10;※ n^3 복잡도 알고리즘 업데이트 필요" />
   </component>
 </project>
