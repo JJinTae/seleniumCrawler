@@ -44,7 +44,7 @@ def main():
     totalData = totalData.T
 
     with pd.ExcelWriter('testDict.xlsx') as writer:
-        departmentData.to_excel(writer, sheet_name="부서별")
+        departmentData.to_excel(writer, sheet_name="파일별")
         totalData.to_excel(writer, sheet_name="총 합")
     # Excel 저장 부분
 
