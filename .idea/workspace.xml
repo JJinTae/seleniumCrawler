@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Implements CountNum to excel&#10;- 빈도수가 측정된 값들을 excel로 저장하여 사용자가 더욱 쉽게 빈도수를 파악할 수 있도록 Dataframe을 excel 파일로 변환&#10;※ 사용자 편의 개선 및 함수화 필요">
+    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Test Python regex&#10;- 정규식을 통해 count()의 문제점 개선을 위한 테스트">
+      <change afterPath="$PROJECT_DIR$/scraping_Chungnam_bulletin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/worldCounter_Files.py" beforeDir="false" afterPath="$PROJECT_DIR$/worldCounter_Files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_re.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_re.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,28 @@
       <recent name="D:\Source_code\TestSchoolProject\seleniumCrawler" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_re">
+  <component name="RunManager" selected="Python.wordCounter">
+    <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="seleniumCrawler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/a.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,7 +92,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scraping_Chungnam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="resttest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -82,7 +104,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scraping_Chungnam.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/resttest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -91,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scraping_Locallaws" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="scraping_Chungnam_bulletin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -103,7 +125,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scraping_Locallaws.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scraping_Chungnam_bulletin.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,34 +176,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="worldCounter_Files" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="seleniumCrawler" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/worldCounter_Files.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_re" />
-        <item itemvalue="Python.worldCounter_Files" />
         <item itemvalue="Python.wordCounter" />
-        <item itemvalue="Python.scraping_Locallaws" />
-        <item itemvalue="Python.scraping_Chungnam" />
+        <item itemvalue="Python.scraping_Chungnam_bulletin" />
+        <item itemvalue="Python.a" />
+        <item itemvalue="Python.resttest" />
+        <item itemvalue="Python.test_re" />
       </list>
     </recent_temporary>
   </component>
@@ -306,7 +307,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619721090370</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Test Python regex&#10;- 정규식을 통해 count()의 문제점 개선을 위한 테스트">
+      <created>1620733127028</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1620733127028</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add scraping_Locallaws.py(자치법규정보시스템 스크랩핑)&#10;- 자치법규정보시스템 서울시 제외 스크랩가능&#10;- 특이한 오류 검출 X">
+      <created>1621391667673</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1621391667673</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,6 +353,8 @@
     <MESSAGE value="Add def deduplicate_word() to wordCounter_Files.py &#10;- count() 함수의 중복 제거&#10;※ n^3 복잡도 알고리즘 업데이트 필요" />
     <MESSAGE value="Fix deduplicate_word()&#10;- 중복제거에서 -1, -2 등의 한번 빼야할 것을 두번 빼는 경우 발생&#10; &gt; 글자순으로 정렬한 후 중복제거 가능하도록 sort_length() 구현" />
     <MESSAGE value="Implements CountNum to excel&#10;- 빈도수가 측정된 값들을 excel로 저장하여 사용자가 더욱 쉽게 빈도수를 파악할 수 있도록 Dataframe을 excel 파일로 변환&#10;※ 사용자 편의 개선 및 함수화 필요" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implements CountNum to excel&#10;- 빈도수가 측정된 값들을 excel로 저장하여 사용자가 더욱 쉽게 빈도수를 파악할 수 있도록 Dataframe을 excel 파일로 변환&#10;※ 사용자 편의 개선 및 함수화 필요" />
+    <MESSAGE value="Test Python regex&#10;- 정규식을 통해 count()의 문제점 개선을 위한 테스트" />
+    <MESSAGE value="Add scraping_Locallaws.py(자치법규정보시스템 스크랩핑)&#10;- 자치법규정보시스템 서울시 제외 스크랩가능&#10;- 특이한 오류 검출 X" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add scraping_Locallaws.py(자치법규정보시스템 스크랩핑)&#10;- 자치법규정보시스템 서울시 제외 스크랩가능&#10;- 특이한 오류 검출 X" />
   </component>
 </project>
