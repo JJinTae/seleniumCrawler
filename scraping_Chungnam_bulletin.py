@@ -12,10 +12,10 @@ import csv
 
 DATA_DIR = 'ScrapData'
 TEMP_DIR = 'D:/Source_code/TestSchoolProject/seleniumCrawler/temp/'
-CSV_POST = os.path.join(DATA_DIR, 'post2.csv')
+CSV_POST = os.path.join(DATA_DIR, 'post_bulletin.csv')
 
 def main():
-    URL = search_date(20201202, 20201202) # 수집할 보도자료 기간 ex) search_date(20200101, 20201231)
+    URL = search_date(20201202, 20201202) # 수집할 공고고시 기간 ex) search_date(20200101, 20201231)
     list = get_list(URL)
     scrap_content(list)
 
@@ -77,10 +77,13 @@ def scrap_content(list):
                 # hwp 파일 txt로 불러와서 저장
                 try:
                     downList = driver2.find_element_by_xpath(xpathDownload).find_elements_by_tag_name("a")
+                    set_empty = True
                     for i in downList:
                         print(i.text)
                         if re.match(r".*(hwp)$", i.text):
-                            content = ""
+                            if set_empty:
+                                content = ""
+                                set_empty = False
                             url = i.get_attribute("href")
                             download_hwp(url)
                             hwp_to_txt(TEMP_DIR)
@@ -110,7 +113,7 @@ def scrap_content(list):
 
 
 def get_text_file():
-    f = open("temp/temp.txt", mode='r')
+    f = open("temp/temp_bulletin.txt", mode='r')
     return f.read()
 
 
@@ -118,13 +121,13 @@ def hwp_to_txt(path):
     # hwp_to_txt()에 넘겨줄 hwpDispatch 사용이 끝난 후 hwp.Quit() 선언 필수
     hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
     hwp.RegisterModule("FilePathCheckDLL", "AutomationModule")
-    hwp.Open(path + "temp.hwp", "HWP", "forceopen:true")
-    hwp.SaveAs(path + "temp.txt", "TEXT")
+    hwp.Open(path + "temp_bulletin.hwp", "HWP", "forceopen:true")
+    hwp.SaveAs(path + "temp_bulletin.txt", "TEXT")
     hwp.Quit()
 
 
 def download_hwp(url):
-    hwpPath = "temp/temp.hwp"
+    hwpPath = "temp/temp_bulletin.hwp"
     with open(hwpPath, "wb") as file:
         response = get(url)
         file.write(response.content)
