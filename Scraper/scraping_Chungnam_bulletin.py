@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 import time
-import selenium
 from requests import get
 import win32com.client as win32
 from selenium import webdriver
-from bs4 import BeautifulSoup
 import re
 import requests
 import os
 import csv
 
-DATA_DIR = 'ScrapData'
-TEMP_DIR = 'D:/Source_code/TestSchoolProject/seleniumCrawler/temp/'
+DATA_DIR = '../ScrapData'
+TEMP_DIR = os.path.join(os.getcwd(), "temp/")
 CSV_POST = os.path.join(DATA_DIR, 'post_bulletin.csv')
 
 def main():
@@ -19,30 +17,9 @@ def main():
     list = get_list(URL)
     scrap_content(list)
 
-
-
-    """
-    for url in list:
-        html = read_html(url)
-        soup = BeautifulSoup(html.text, "html.parser")
-        date = soup.select("/html/body/form/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/div[1]/table/tbody/tr[2]/td[1]")
-        department = 1
-        title = 1
-        content = 1
-    """
-
-    # driver.execute_script("window.history.go(-1)") 뒤로가기
-    """
-    page_bar = driver.find_elements_by_css_selector("div.pagination > *")
-    for i in page_bar:
-        print(i.text)
-    """
-
 def scrap_content(list):
     driver2 = webdriver.Chrome('chromedriver', options=driver_option())
     driver2.implicitly_wait(time_to_wait=5)  # 암묵적 대기 단위 초
-
-
 
     cols = ['date', 'department', 'title', 'content']
     count = 0
@@ -107,8 +84,6 @@ def scrap_content(list):
         else:
             print("통과되었습니다.")
             flag = True
-
-
 
 
 

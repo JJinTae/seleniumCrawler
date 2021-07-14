@@ -1,37 +1,17 @@
 import time
-import selenium
 from selenium import webdriver
-from bs4 import BeautifulSoup
 import requests
 import os
 import csv
 
-DATA_DIR = 'ScrapData'
+DATA_DIR = '../ScrapData'
 CSV_POST = os.path.join(DATA_DIR, 'post.csv')
 
 def main():
+
     URL = search_date(20200101, 20201231) # 수집할 보도자료 기간 ex) search_date(20200101, 20201231)
     list = get_list(URL)
     scrap_content(list)
-
-
-
-    """
-    for url in list:
-        html = read_html(url)
-        soup = BeautifulSoup(html.text, "html.parser")
-        date = soup.select("/html/body/form/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/div[1]/table/tbody/tr[2]/td[1]")
-        department = 1
-        title = 1
-        content = 1
-    """
-
-    # driver.execute_script("window.history.go(-1)") 뒤로가기
-    """
-    page_bar = driver.find_elements_by_css_selector("div.pagination > *")
-    for i in page_bar:
-        print(i.text)
-    """
 
 def scrap_content(list):
     driver2 = webdriver.Chrome('chromedriver', options=driver_option())
@@ -71,7 +51,6 @@ def scrap_content(list):
                     w.writerow(row)
             except:
                 print("데이터가 비었습니다.")
-
 
         else:
             print("통과되었습니다.")

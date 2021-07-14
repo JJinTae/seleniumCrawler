@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Add scraping_Chungnam_bulletin.py(공고/고시 스크랩핑)&#10;- 충남도청 공고/고시 스크랩 가능&#10;- 한글파일을 python에서 불러올 수 있도록 구현&#10;- python에서 content가 비어있을 때 float으로 읽는 오류가 발생하여 default를 empty로 주어 문제 해결">
-      <change afterPath="$PROJECT_DIR$/scraping_Chungnam_News.py" afterDir="false" />
+    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Implements 정규식을 이용한 부서별 단어 사용 횟수 확인&#10;- 부서별 단어 사용 횟수 확인 가능">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/seleniumCrawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/seleniumCrawler.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scraping_Chungnam_bulletin.py" beforeDir="false" afterPath="$PROJECT_DIR$/scraping_Chungnam_bulletin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordCounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frequencyCounting.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter/frequencyCounting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_Chungnam.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scraper/scraping_Chungnam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_Chungnam_News.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scraper/scraping_Chungnam_News.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_Chungnam_bulletin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scraper/scraping_Chungnam_bulletin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scraping_Locallaws.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scraper/scraping_Locallaws.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_re.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter/wordCounter_regex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordCounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter/wordCounter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/worldCounter_Files.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter/worldCounter_files.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +38,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="c9437c6b-cba7-41b4-8ee1-83376579ea6a" />
-  </component>
   <component name="ProjectId" id="1pdfKdzbdG4k8RlpfLDm8CeIOrN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -42,16 +47,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prosel/secl" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\test\seleniumCrawler\Scraper" />
+      <recent name="C:\test\seleniumCrawler\wordCounter" />
+      <recent name="C:\test\seleniumCrawler\Scraping" />
       <recent name="D:\Source_code\TestSchoolProject\seleniumCrawler" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.scraping_Chungnam_News">
-    <configuration name="a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.frequencyCounting">
+    <configuration name="frequencyCounting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -59,32 +67,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wordCounter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/a.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="c" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="seleniumCrawler" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/c.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordCounter/frequencyCounting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -122,11 +109,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scraping_Chungnam_News.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/scraping_Chungnam_News.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,11 +130,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scraping_Chungnam_bulletin.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/scraping_Chungnam_bulletin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scraping_Locallaws" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="seleniumCrawler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/scraping_Locallaws.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,11 +172,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wordCounter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordCounter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordCounter/wordCounter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.scraping_Chungnam_News" />
-        <item itemvalue="Python.c" />
+        <item itemvalue="Python.frequencyCounting" />
         <item itemvalue="Python.wordCounter" />
+        <item itemvalue="Python.scraping_Locallaws" />
+        <item itemvalue="Python.scraping_Chungnam_News" />
         <item itemvalue="Python.scraping_Chungnam_bulletin" />
-        <item itemvalue="Python.a" />
       </list>
     </recent_temporary>
   </component>
@@ -329,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621994601211</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Implements 정규식을 이용한 부서별 단어 사용 횟수 확인&#10;- 부서별 단어 사용 횟수 확인 가능">
+      <created>1625081091230</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1625081091230</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -364,6 +379,7 @@
     <MESSAGE value="Test Python regex&#10;- 정규식을 통해 count()의 문제점 개선을 위한 테스트" />
     <MESSAGE value="Add scraping_Locallaws.py(자치법규정보시스템 스크랩핑)&#10;- 자치법규정보시스템 서울시 제외 스크랩가능&#10;- 특이한 오류 검출 X" />
     <MESSAGE value="Add scraping_Chungnam_bulletin.py(공고/고시 스크랩핑)&#10;- 충남도청 공고/고시 스크랩 가능&#10;- 한글파일을 python에서 불러올 수 있도록 구현&#10;- python에서 content가 비어있을 때 float으로 읽는 오류가 발생하여 default를 empty로 주어 문제 해결" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add scraping_Chungnam_bulletin.py(공고/고시 스크랩핑)&#10;- 충남도청 공고/고시 스크랩 가능&#10;- 한글파일을 python에서 불러올 수 있도록 구현&#10;- python에서 content가 비어있을 때 float으로 읽는 오류가 발생하여 default를 empty로 주어 문제 해결" />
+    <MESSAGE value="Implements 정규식을 이용한 부서별 단어 사용 횟수 확인&#10;- 부서별 단어 사용 횟수 확인 가능" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implements 정규식을 이용한 부서별 단어 사용 횟수 확인&#10;- 부서별 단어 사용 횟수 확인 가능" />
   </component>
 </project>

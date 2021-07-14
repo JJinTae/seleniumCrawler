@@ -1,18 +1,16 @@
 # -*- coding: utf-8 -*-
 import time
-import selenium
 from requests import get
 import win32com.client as win32
 from selenium import webdriver
-from bs4 import BeautifulSoup
 import datetime
 import re
 import requests
 import os
 import csv
 
-DATA_DIR = 'ScrapData'
-TEMP_DIR = 'D:/Source_code/TestSchoolProject/seleniumCrawler/temp/'
+DATA_DIR = '../ScrapData'
+TEMP_DIR = os.path.join(os.getcwd(), "temp/")
 CSV_POST = os.path.join(DATA_DIR, 'post_news.csv')
 
 def main():

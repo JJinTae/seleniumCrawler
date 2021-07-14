@@ -3,7 +3,7 @@ import os
 import time
 from selenium import webdriver
 
-DATA_DIR = 'ScrapData'
+DATA_DIR = '../ScrapData'
 CSV_POST = os.path.join(DATA_DIR, 'localLaws.csv')
 
 def main():

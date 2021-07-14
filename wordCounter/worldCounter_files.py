@@ -5,9 +5,9 @@ import os
 
 
 def main():
-    # PATH = "./data_Text/*"
-    PATH = "./data_Text/"
-    wordPATH = "data_file/SearchWords.xlsx"
+
+    PATH = "../data_text/"
+    wordPATH = "../data_file/SearchWords.xlsx"
 
     list_file = dict((key, dict()) for key in os.listdir(PATH))
     searchWord = load_searchWord(wordPATH)
@@ -43,7 +43,7 @@ def main():
     totalData = pd.DataFrame(data=[totalCount], index=["빈도수"])
     totalData = totalData.T
 
-    with pd.ExcelWriter('testDict.xlsx') as writer:
+    with pd.ExcelWriter('result.xlsx') as writer:
         departmentData.to_excel(writer, sheet_name="파일별")
         totalData.to_excel(writer, sheet_name="총 합")
     # Excel 저장 부분
@@ -56,7 +56,6 @@ def sort_length(dictList):
 
 def view_count_department(dictList):
     for listUnique in list(dictList):
-        # print(i, " : ", num_department[i])
         res = sorted(dictList[listUnique].items(), key=(lambda x:x[1]), reverse=True)
         print(listUnique, " : ", res)
 
@@ -81,11 +80,9 @@ def deduplicate_word(dictList : dict):
                         dictList[file][i] = dictList[file][i] - dictList[file][j]
 
 
-
-
 def load_searchWord(file_path):
     df = pd.read_excel(file_path, sheet_name=0)  # can also name of sheet
-    my_list = df['단어/용어'].tolist()
+    my_list = df['대상어'].tolist()
 
     return my_list
 
