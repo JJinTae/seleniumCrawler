@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Implements 정규식을 이용한 부서별 단어 사용 횟수 확인&#10;- 부서별 단어 사용 횟수 확인 가능">
-      <change afterPath="$PROJECT_DIR$/Scraper/scraping_MOIS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scraper/seoul/scraping_Seoul.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scraper/temp/temp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/seleniumCrawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/seleniumCrawler.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wordCounter/wordCounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter/wordCounter.py" afterDir="false" />
     </list>
@@ -49,7 +52,7 @@
       <recent name="D:\Source_code\TestSchoolProject\seleniumCrawler" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.wordCounter">
+  <component name="RunManager" selected="Python.scraping_Seoul">
     <configuration name="frequencyCounting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,6 +95,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="scraping_Chungnam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="seleniumCrawler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/scraping_Chungnam.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="scraping_Chungnam_bulletin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,7 +137,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scraping_Locallaws" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="scraping_Seoul" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -121,32 +145,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper/seoul" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/scraping_Locallaws.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scraping_MOIS" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="seleniumCrawler" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/scraping_MOIS.py" />
+      <option name="SCRIPT_NAME" value="C:\WordCounter\seleniumCrawler\Scraper\seoul\scraping_Seoul.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -178,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.wordCounter" />
-        <item itemvalue="Python.scraping_MOIS" />
+        <item itemvalue="Python.scraping_Seoul" />
         <item itemvalue="Python.scraping_Chungnam_bulletin" />
+        <item itemvalue="Python.scraping_Chungnam" />
+        <item itemvalue="Python.wordCounter" />
         <item itemvalue="Python.frequencyCounting" />
-        <item itemvalue="Python.scraping_Locallaws" />
       </list>
     </recent_temporary>
   </component>

@@ -14,7 +14,7 @@ def main():
     # xlrd 1.2.0 패키지 설치 필수
     wordPath = "../data_file/SearchWords.xlsx"
     name = ['date', 'department', 'title', 'content'] # 칼럼 이름
-    contents = pd.read_csv('../ScrapData/ys19_fv2.csv', encoding='utf-8', header=0, parse_dates=['department'], names=name)
+    contents = pd.read_csv('../ScrapData/ys19_fv.csv', encoding='utf-8', header=0, parse_dates=['department'], names=name)
 
     data_info(contents) # 불러온 csv파일의 정보 확인
     allDepartments = get_allDepartments(contents) # 데이터의 모든 부서 조회(중복O)
