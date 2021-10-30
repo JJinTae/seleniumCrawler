@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Implements 정규식을 이용한 부서별 단어 사용 횟수 확인&#10;- 부서별 단어 사용 횟수 확인 가능">
-      <change afterPath="$PROJECT_DIR$/Scraper/seoul/scraping_Seoul.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scraper/temp/temp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/seleniumCrawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/seleniumCrawler.iml" afterDir="false" />
+    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Add scraping_Seoul.py (보도자료 스크랩핑) &#10;- 서울시청 보도자료 스크랩 기능&#10;- hwp 변경 내용 추적 기능으로 인하여 멈춤 발생">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scraper/seoul/scraping_Seoul.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scraper/seoul/scraping_Seoul.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wordCounter/wordCounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter/wordCounter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +38,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../prosel/secl" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ScrapData" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\WordCounter\seleniumCrawler\ScrapData" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\WordCounter\seleniumCrawler\ScrapData" />
       <recent name="C:\test\seleniumCrawler\Scraper" />
       <recent name="C:\test\seleniumCrawler\wordCounter" />
       <recent name="C:\test\seleniumCrawler\Scraping" />
@@ -182,9 +183,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.scraping_Seoul" />
+        <item itemvalue="Python.wordCounter" />
         <item itemvalue="Python.scraping_Chungnam_bulletin" />
         <item itemvalue="Python.scraping_Chungnam" />
-        <item itemvalue="Python.wordCounter" />
         <item itemvalue="Python.frequencyCounting" />
       </list>
     </recent_temporary>
@@ -338,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625081091230</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add scraping_Seoul.py (보도자료 스크랩핑) &#10;- 서울시청 보도자료 스크랩 기능&#10;- hwp 변경 내용 추적 기능으로 인하여 멈춤 발생">
+      <created>1633198085006</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1633198085006</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -374,6 +382,7 @@
     <MESSAGE value="Add scraping_Locallaws.py(자치법규정보시스템 스크랩핑)&#10;- 자치법규정보시스템 서울시 제외 스크랩가능&#10;- 특이한 오류 검출 X" />
     <MESSAGE value="Add scraping_Chungnam_bulletin.py(공고/고시 스크랩핑)&#10;- 충남도청 공고/고시 스크랩 가능&#10;- 한글파일을 python에서 불러올 수 있도록 구현&#10;- python에서 content가 비어있을 때 float으로 읽는 오류가 발생하여 default를 empty로 주어 문제 해결" />
     <MESSAGE value="Implements 정규식을 이용한 부서별 단어 사용 횟수 확인&#10;- 부서별 단어 사용 횟수 확인 가능" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implements 정규식을 이용한 부서별 단어 사용 횟수 확인&#10;- 부서별 단어 사용 횟수 확인 가능" />
+    <MESSAGE value="Add scraping_Seoul.py (보도자료 스크랩핑) &#10;- 서울시청 보도자료 스크랩 기능&#10;- hwp 변경 내용 추적 기능으로 인하여 멈춤 발생" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add scraping_Seoul.py (보도자료 스크랩핑) &#10;- 서울시청 보도자료 스크랩 기능&#10;- hwp 변경 내용 추적 기능으로 인하여 멈춤 발생" />
   </component>
 </project>

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import time
+from selenium.webdriver.support import expected_conditions as EC
+
 from requests import get
 import win32com.client as win32
 from selenium import webdriver
@@ -8,14 +10,17 @@ import requests
 import os
 import csv
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+
 DATA_DIR = '../../ScrapData'
 TEMP_DIR = os.path.join(os.getcwd(), "../temp/")
-CSV_POST = os.path.join(DATA_DIR, 'post_seoul_test.csv')
+CSV_POST = os.path.join(DATA_DIR, 'post_seoul_problem.csv')
 TEMP_TXT_FILE = "temp_seoul.txt"
 TEMP_HW_FILE = "temp_seoul.hwp"
 
 def main():
-    URL = search_date(20200101, 20201231) # 수집할 공고고시 기간 ex) search_date(20200101, 20201231)
+    URL = search_date(20200101, 20200131) # 수집할 공고고시 기간 ex) search_date(20200101, 20201231)
     list = get_list(URL)
     scrap_content(list)
 
@@ -32,12 +37,26 @@ def scrap_content(list):
             w.writerow(cols)
 
     for post in list:
+        driver2 = webdriver.Chrome('chromedriver', options=driver_option())
+        driver2.implicitly_wait(time_to_wait=10)  # 암묵적 대기 단위 초
+
         print("들어왔습니다.")
         count += 1
         print(count)
+        print(post)
         #print(i.get_attribute("href"))
         driver2.get(url="https://www.seoul.go.kr/news/news_report.do#view/" + post)
+
+        element_present = EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/section/div/div[2]/div[2]/div/div[1]/table/thead/tr[1]/th/p[1]"))
+
+        WebDriverWait(driver2, 10).until(
+            element_present
+            # EC.invisibility_of_element((By.ID, "scrabArea"))
+            # EC.invisibility_of_element_located((By.CSS_SELECTOR, ".sib-viw-type-basic-subject-name"))
+        )
+
         time.sleep(1)
+
         try:
             xpathDate = "/html/body/div[2]/section/div/div[2]/div[2]/div/div[1]/table/thead/tr[1]/th/p[3]/span[1]"
             xpathDepartment1 = "/html/body/div[2]/section/div/div[2]/div[2]/div/div[1]/table/thead/tr[1]/th/p[2]/span[2]"
@@ -53,8 +72,10 @@ def scrap_content(list):
 
             # hwp 파일 txt로 불러와서 저장
             try:
-                downList = driver2.find_element_by_class_name("sib-viw-type-basic-file").find_elements_by_tag_name("a")
+                downList = driver2.find_element_by_class_name("sib-viw-type-basic-file").find_elements_by_tag_name("p")
                 set_empty = True
+                print(downList[0].get_attribute("data-fileno"))
+                print("downList ", len(downList))
 
                 #한 게시글에 파일이 두 개 이상 존재할 경우
                 if len(downList) > 1:
@@ -62,18 +83,19 @@ def scrap_content(list):
 
                 for i in downList:
                     print(i.text)
-                    if re.match(r".*(hwp)$", i.text):
+                    if re.match(r".*(hwp|hwpx)", i.text):
                         if set_empty:
                             content = ""
                             set_empty = False
                         #url = i.get_attribute("href")
-                        url = "https://seoulboard.seoul.go.kr/comm/getFile?srvcId=BBSTY1&upperNo="+post+"&fileTy=ATTACH&fileNo=1&bbsNo=158"
+                        url = "https://seoulboard.seoul.go.kr/comm/getFile?srvcId=BBSTY1&upperNo="+post+"&fileTy=ATTACH&fileNo="+i.get_attribute("data-fileno")+"&bbsNo=158"
                         download_hwp(url)
                         hwp_to_txt(TEMP_DIR)
                         content = content + get_text_file()
             except Exception as e:
                 print(e)
                 print("Hwp 파일이 없습니다. Content만 저장합니다.")
+
 
             print(
                 "DATE : " + date + "\nDEPARTMENT : " + department + "\nTITLE : " + title + "\nCONTENT :" + content)
@@ -84,10 +106,11 @@ def scrap_content(list):
             with open(CSV_POST, 'a', newline='', encoding='utf-8') as f:
                 w = csv.writer(f)
                 w.writerow(row)
-        except:
+        except Exception as e:
             print("데이터가 비었습니다.")
+            print(e)
 
-
+        driver2.close()
 
 
 def get_text_file():
@@ -115,7 +138,7 @@ def download_hwp(url):
 def driver_option():
     options = webdriver.ChromeOptions()
     options.add_argument('window-size=1920,1080')
-    options.add_argument('headless')
+    # options.add_argument('headless')
 
     return options
 
@@ -151,7 +174,7 @@ def search_date(srtdate, enddate):
     pageQuery = "#list/1/"
     strdateQuery = "&srchBeginDt=" + str(srtdate)
     enddateQuery = "&srchEndDt=" + str(enddate)
-    showQuery = "&cntPerPage=5000"
+    showQuery = "&cntPerPage=100"
 
     URL = URL + menuQuery + pageQuery + strdateQuery + enddateQuery + showQuery
     print("Page 탐색 URL : " + URL)
