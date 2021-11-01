@@ -15,12 +15,12 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 DATA_DIR = '../../ScrapData'
 TEMP_DIR = os.path.join(os.getcwd(), "../temp/")
-CSV_POST = os.path.join(DATA_DIR, 'post_seoul_problem.csv')
+CSV_POST = os.path.join(DATA_DIR, 'post_seoul_problem_t99.csv')
 TEMP_TXT_FILE = "temp_seoul.txt"
 TEMP_HW_FILE = "temp_seoul.hwp"
 
 def main():
-    URL = search_date(20200101, 20200131) # 수집할 공고고시 기간 ex) search_date(20200101, 20201231)
+    URL = search_date(20200101, 20201231) # 수집할 공고고시 기간 ex) search_date(20200101, 20201231)
     list = get_list(URL)
     scrap_content(list)
 
@@ -38,7 +38,7 @@ def scrap_content(list):
 
     for post in list:
         driver2 = webdriver.Chrome('chromedriver', options=driver_option())
-        driver2.implicitly_wait(time_to_wait=10)  # 암묵적 대기 단위 초
+        driver2.implicitly_wait(time_to_wait=30)  # 암묵적 대기 단위 초
 
         print("들어왔습니다.")
         count += 1
@@ -49,7 +49,7 @@ def scrap_content(list):
 
         element_present = EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/section/div/div[2]/div[2]/div/div[1]/table/thead/tr[1]/th/p[1]"))
 
-        WebDriverWait(driver2, 10).until(
+        WebDriverWait(driver2, 30).until(
             element_present
             # EC.invisibility_of_element((By.ID, "scrabArea"))
             # EC.invisibility_of_element_located((By.CSS_SELECTOR, ".sib-viw-type-basic-subject-name"))
@@ -83,7 +83,7 @@ def scrap_content(list):
 
                 for i in downList:
                     print(i.text)
-                    if re.match(r".*(hwp|hwpx)", i.text):
+                    if re.match(r".*(hwp|hwpx|hwt)", i.text):
                         if set_empty:
                             content = ""
                             set_empty = False
@@ -122,7 +122,9 @@ def hwp_to_txt(path):
     # hwp_to_txt()에 넘겨줄 hwpDispatch 사용이 끝난 후 hwp.Quit() 선언 필수
     hwp = win32.gencache.EnsureDispatch("HWPFrame.HwpObject")
     hwp.RegisterModule("FilePathCheckDLL", "AutomationModule")
+    hwp.SetMessageBoxMode(0x00000020)
     hwp.Open(path + TEMP_HW_FILE, "HWP", "forceopen:true")
+    hwp.SetMessageBoxMode(0x00010000)
     hwp.SaveAs(path + TEMP_TXT_FILE, "TEXT")
     hwp.Quit()
 
@@ -138,16 +140,16 @@ def download_hwp(url):
 def driver_option():
     options = webdriver.ChromeOptions()
     options.add_argument('window-size=1920,1080')
-    # options.add_argument('headless')
+    options.add_argument('headless')
 
     return options
 
 
 def get_list(url):
     driver = webdriver.Chrome('chromedriver', options=driver_option())
-    driver.implicitly_wait(time_to_wait=5)  # 암묵적 대기 단위 초
+    driver.implicitly_wait(time_to_wait=30)  # 암묵적 대기 단위 초
     driver.get(url=url)
-    time.sleep(10)
+    time.sleep(30)
 
     postList = []
 
@@ -174,7 +176,7 @@ def search_date(srtdate, enddate):
     pageQuery = "#list/1/"
     strdateQuery = "&srchBeginDt=" + str(srtdate)
     enddateQuery = "&srchEndDt=" + str(enddate)
-    showQuery = "&cntPerPage=100"
+    showQuery = "&cntPerPage=4000"
 
     URL = URL + menuQuery + pageQuery + strdateQuery + enddateQuery + showQuery
     print("Page 탐색 URL : " + URL)
