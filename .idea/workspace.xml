@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Add scraping_Seoul.py (보도자료 스크랩핑) &#10;- 서울시청 보도자료 스크랩 기능&#10;- hwp 변경 내용 추적 기능으로 인하여 멈춤 발생">
+    <list default="true" id="02c9d7df-a259-49e8-aa33-962facceb964" name="Default Changelist" comment="Add scraping_Cheonan.py (보도자료 스크랩핑)&#10;- 천안시청 보도자료 스크랩 기능">
+      <change afterPath="$PROJECT_DIR$/Scraper/gongju/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scraper/gongju/scraping_Gongju.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scraper/seoul/scraping_Seoul.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scraper/seoul/scraping_Seoul.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordCounter/wordCounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/wordCounter/wordCounter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +39,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ScrapData" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Scraper/gongju" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\WordCounter\seleniumCrawler\Scraper\gongju" />
+      <recent name="C:\WordCounter\seleniumCrawler\Scraper\seoul" />
+      <recent name="C:\WordCounter\seleniumCrawler" />
       <recent name="C:\WordCounter\seleniumCrawler\ScrapData" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -53,28 +57,7 @@
       <recent name="D:\Source_code\TestSchoolProject\seleniumCrawler" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.scraping_Seoul">
-    <configuration name="frequencyCounting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="seleniumCrawler" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wordCounter" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordCounter/frequencyCounting.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.scraping_Gongju">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,7 +79,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scraping_Chungnam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="scraping_Cheonan" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -104,11 +87,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper/cheonan" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/scraping_Chungnam.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/cheonan/scraping_Cheonan.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -117,7 +100,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scraping_Chungnam_bulletin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="scraping_Gongju" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -125,11 +108,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper/gongju" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/scraping_Chungnam_bulletin.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/gongju/scraping_Gongju.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scraping_MCST" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="seleniumCrawler" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scraper/mcst" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scraper/mcst/scraping_MCST.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -159,7 +163,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="wordCounter" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="seleniumCrawler" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,11 +171,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wordCounter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wordCounter/wordCounter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -182,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scraping_Gongju" />
+        <item itemvalue="Python.scraping_Cheonan" />
+        <item itemvalue="Python.scraping_MCST" />
         <item itemvalue="Python.scraping_Seoul" />
-        <item itemvalue="Python.wordCounter" />
-        <item itemvalue="Python.scraping_Chungnam_bulletin" />
-        <item itemvalue="Python.scraping_Chungnam" />
-        <item itemvalue="Python.frequencyCounting" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -346,7 +350,28 @@
       <option name="project" value="LOCAL" />
       <updated>1633198085006</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fix scraping_Seoul.py (보도자료 스크랩핑) #1&#10;- 포스트 요청 ajax 처리로 인한 데이터 불러오기 문제 수정&#10;- 서울시청 보도자료 게시판의 한글파일 다운로드 기능에서 파일마다 다른 data-fileno를 처리하여 문제 수정">
+      <created>1635617785509</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1635617785509</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add scraping_MCST.py (보도자료 스크랩핑)&#10;- 문화체육관광부 보도자료 스크랩 기능&#10;&#10;- hwp 파일 다운로드 이후 hwp_to_txt() 실행 시 hwp 파일이 빈 문서로 열리는 문제로 인하여 contents 저장 불가">
+      <created>1635784689653</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1635784689653</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Add scraping_Cheonan.py (보도자료 스크랩핑)&#10;- 천안시청 보도자료 스크랩 기능">
+      <created>1636642199706</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1636642199706</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,6 +408,9 @@
     <MESSAGE value="Add scraping_Chungnam_bulletin.py(공고/고시 스크랩핑)&#10;- 충남도청 공고/고시 스크랩 가능&#10;- 한글파일을 python에서 불러올 수 있도록 구현&#10;- python에서 content가 비어있을 때 float으로 읽는 오류가 발생하여 default를 empty로 주어 문제 해결" />
     <MESSAGE value="Implements 정규식을 이용한 부서별 단어 사용 횟수 확인&#10;- 부서별 단어 사용 횟수 확인 가능" />
     <MESSAGE value="Add scraping_Seoul.py (보도자료 스크랩핑) &#10;- 서울시청 보도자료 스크랩 기능&#10;- hwp 변경 내용 추적 기능으로 인하여 멈춤 발생" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add scraping_Seoul.py (보도자료 스크랩핑) &#10;- 서울시청 보도자료 스크랩 기능&#10;- hwp 변경 내용 추적 기능으로 인하여 멈춤 발생" />
+    <MESSAGE value="Fix scraping_Seoul.py (보도자료 스크랩핑) #1&#10;- 포스트 요청 ajax 처리로 인한 데이터 불러오기 문제 수정&#10;- 서울시청 보도자료 게시판의 한글파일 다운로드 기능에서 파일마다 다른 data-fileno를 처리하여 문제 수정" />
+    <MESSAGE value="Add scraping_MCST.py (보도자료 스크랩핑)&#10;- 문화체육관광부 보도자료 스크랩 기능&#10;&#10;- hwp 파일 다운로드 이후 hwp_to_txt() 실행 시 hwp 파일이 빈 문서로 열리는 문제로 인하여 contents 저장 불가" />
+    <MESSAGE value="Add scraping_Cheonan.py (보도자료 스크랩핑)&#10;- 천안시청 보도자료 스크랩 기능" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add scraping_Cheonan.py (보도자료 스크랩핑)&#10;- 천안시청 보도자료 스크랩 기능" />
   </component>
 </project>
